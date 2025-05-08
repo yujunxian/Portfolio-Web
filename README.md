@@ -64,7 +64,7 @@ This personal portfolio website is designed to present Junxian Yu's professional
 1. Clone the repository to your local machine
 
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git](https://github.com/yujunxian/Portfolio-Web
+git clone https://github.com/yujunxian/Portfolio-Web
 cd Portfolio-Web
 ```
 
