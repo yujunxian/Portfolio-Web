@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Skills - Junxian's Portfolio</title>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% if session.logged_in %}
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    {% endif %}
+    <header>
+        <div class="container">
+            <h1 class="logo">Junxian</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('education') }}">Education</a></li>
+                    <li><a href="{{ url_for('experience') }}">Experience</a></li>
+                    <li><a href="{{ url_for('achievements') }}">Achievements</a></li>
+                    <li><a href="{{ url_for('skills') }}" class="active">Skills</a></li>
+                    <li><a href="{{ url_for('personal') }}">Personal</a></li>
+                    <li><a href="{{ url_for('contact') }}">Thank You</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Professional and technical competencies I've developed</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="container">
+            <div class="skills-category">
+                <h3 class="section-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Computer Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">MATLAB</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>Microsoft Office</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Word</span>
+                            <span class="skill-tag">PowerPoint</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Engineering Software</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CostX</span>
+                            <span class="skill-tag">Revit</span>
+                            <span class="skill-tag">Navisworks</span>
+                            <span class="skill-tag">Palisade @Risk</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="section-title">Professional Skills</h3>
+                <div class="skills-grid">
+                    <div class="card professional-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Communication</h4>
+                        <p>The ability to deal with people at all levels via different approaches to ensure successful communication.</p>
+                        <div class="skill-level">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card professional-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Problem Solving</h4>
+                        <p>Methodically resolve in-depth queries to find the most appropriate resolutions and efficiencies.</p>
+                        <div class="skill-level">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card professional-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Team Player</h4>
+                        <p>Share knowledge and encourage the development of others.</p>
+                        <div class="skill-level">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card professional-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>Planning & Organizing</h4>
+                        <p>Highly organized, flexible, with excellent attention to detail, and with a strong work ethic.</p>
+                        <div class="skill-level">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h3>Learn More About My Personal Attributes</h3>
+            <a href="{{ url_for('personal') }}" class="btn">View Personal Attributes</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Junxian Yu Portfolio. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:Junxian.yu@outlook.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .skills-section {
+            padding: 80px 0;
+        }
+        
+        .skills-category {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary-color);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .skill-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--secondary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .skill-meter {
+            height: 6px;
+            background-color: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--secondary-color), #1abc9c);
+            border-radius: 10px;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .professional-skill-card {
+            text-align: center;
+            padding: 35px 25px;
+        }
+        
+        .professional-skill-card h4 {
+            margin-bottom: 15px;
+        }
+        
+        .professional-skill-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .skill-level {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skill-tags {
+                justify-content: center;
+            }
+        }
+        
+        /* Animation for skill progress bars */
+        @keyframes progressAnimation {
+            0% {
+                width: 0;
+            }
+        }
+        
+        .animate-on-scroll {
+            animation: progressAnimation 1.5s ease-in-out forwards;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate skill bars when they come into view
+            const progressBars = document.querySelectorAll('.skill-progress');
+            
+            // Create an intersection observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animation class when the element is visible
+                        entry.target.classList.add('animate-on-scroll');
+                        // Stop observing once animation is triggered
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            // Observe each progress bar
+            progressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Attributes - Junxian's Portfolio</title>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% if session.logged_in %}
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    {% endif %}
+    <header>
+        <div class="container">
+            <h1 class="logo">Junxian</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('education') }}">Education</a></li>
+                    <li><a href="{{ url_for('experience') }}">Experience</a></li>
+                    <li><a href="{{ url_for('achievements') }}">Achievements</a></li>
+                    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                    <li><a href="{{ url_for('personal') }}" class="active">Personal</a></li>
+                    <li><a href="{{ url_for('contact') }}">Thank You</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Personal Attributes</h2>
+            <p>Qualities, extracurricular activities, and language skills that define me</p>
+        </div>
+    </section>
+
+    <section class="personal-attributes">
+        <div class="container">
+            <div class="attributes-section">
+                <h3 class="section-title">Personal Qualities</h3>
+                <div class="attributes-grid">
+                    <div class="card attribute-card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Exceptional Learning & Adaptability</h4>
+                        <p>Evidenced by achieving high academic performance in graduate studies, despite not having a related undergraduate background.</p>
+                    </div>
+                    
+                    <div class="card attribute-card">
+                        <div class="card-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Proficient Communication</h4>
+                        <p>Skills developed while working closely within a team at Target.</p>
+                    </div>
+                    
+                    <div class="card attribute-card">
+                        <div class="card-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Working Under Pressure</h4>
+                        <p>Experienced in working under pressure and providing high levels of customer service while serving customers.</p>
+                    </div>
+                    
+                    <div class="card attribute-card">
+                        <div class="card-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Reliability & Work Ethic</h4>
+                        <p>Reliable and trustworthy with a strong work ethic as demonstrated by achieving excellent academic results at university.</p>
+                    </div>
+                    
+                    <div class="card attribute-card">
+                        <div class="card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Time Management</h4>
+                        <p>Excellent time management skills developed while managing the competing priorities of a full academic course load and part-time work.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extracurricular-section">
+                <h3 class="section-title">Co-curricular Activities</h3>
+                <div class="card activities-card">
+                    <h4><i class="fas fa-school"></i> Alphington Grammar School</h4>
+                    <ul class="activities-list">
+                        <li><i class="fas fa-check"></i> Tour conductor on school open days</li>
+                        <li><i class="fas fa-check"></i> Visual Art subject leader</li>
+                        <li><i class="fas fa-check"></i> Contestants in Swimming Game and Badminton Game</li>
+                        <li><i class="fas fa-check"></i> Drum performer at Speech Night event</li>
+                        <li><i class="fas fa-check"></i> Visual Art performer at the Cultural Night event</li>
+                        <li><i class="fas fa-check"></i> Swimming team member</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="language-section">
+                <h3 class="section-title">Language Skills</h3>
+                <div class="language-cards">
+                    <div class="card language-card">
+                        <div class="language-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>Mandarin</h4>
+                        <div class="language-level">Native Speaker</div>
+                    </div>
+                    
+                    <div class="card language-card">
+                        <div class="language-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>English</h4>
+                        <div class="language-level">Fluent Speaker</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h3>Thank You for Visiting</h3>
+            <a href="{{ url_for('contact') }}" class="btn">View Thank You</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Junxian Yu Portfolio. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:Junxian.yu@outlook.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .attributes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .attribute-card {
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .attribute-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .attribute-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+        
+        .attribute-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .activities-card {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+        
+        .activities-card h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .activities-card h4 i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .activities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .activities-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .activities-list li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .language-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .language-card {
+            width: 200px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .language-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .language-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+        
+        .language-level {
+            padding: 5px 15px;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 50px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .attributes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .activities-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .language-card {
+                width: 80%;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You - Junxian's Portfolio</title>
+    {% include 'head.html' %}
+</head>
+<body>
+    {% if session.logged_in %}
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    {% endif %}
+    <header>
+        <div class="container">
+            <h1 class="logo">Junxian</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('education') }}">Education</a></li>
+                    <li><a href="{{ url_for('experience') }}">Experience</a></li>
+                    <li><a href="{{ url_for('achievements') }}">Achievements</a></li>
+                    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                    <li><a href="{{ url_for('personal') }}">Personal</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="active">Thank You</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Thank You</h2>
+            <p>I appreciate your interest in my work and portfolio</p>
+        </div>
+    </section>
+
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="card thank-you-card">
+                <div class="thank-you-content">
+                    <h1>Thank You for Visiting My Portfolio</h1>
+                    <div class="thank-you-divider"></div>
+                    
+                    <div class="thank-you-message">
+                        <p>I sincerely appreciate you taking the time to browse my personal portfolio website. I hope the content has provided you with a better understanding of my educational background, work experience, skills, and personal attributes.I am committed to continuous learning and growth, and I aspire to apply my professional knowledge and skills in practical work to create value.If you'd like to get in touch with me, please feel free to reach out via email or through my social media channels.</p>
+                        
+                        <div class="contact-info-box">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Junxian.yu@outlook.com">Junxian.yu@outlook.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+14257534866</span>
+                            </div>
+                        </div>
+                        
+                        <p>Thank you again for your interest!</p>
+                    </div>
+                    
+                    <div class="thank-you-signature">
+                        <p>Best regards,</p>
+                        <p>Junxian</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Junxian Yu Portfolio. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:Junxian.yu@outlook.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        .thank-you-section {
+            padding: 80px 0 120px;
+        }
+        
+        .thank-you-card {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px;
+        }
+        
+        .thank-you-content {
+            text-align: center;
+        }
+        
+        .thank-you-divider {
+            height: 3px;
+            width: 80px;
+            background-color: var(--secondary-color);
+            margin: 30px auto 50px;
+        }
+        
+        .thank-you-message {
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+        
+        .thank-you-message p {
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-box {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        
+        .thank-you-signature {
+            margin-top: 60px;
+            font-style: italic;
+        }
+        
+        .thank-you-signature p:last-child {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+    </style>
+</body>
+</html> 
